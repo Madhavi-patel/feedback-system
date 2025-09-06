@@ -1,0 +1,118 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+}
+:root{
+  --mainColor:#ddf6d2;
+  --mainColorLight:#ecf1e5;
+  --secondaryColor:#4a8331;
+  --textColor:#77d151;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0px 2rem;
+  background-color: var(--mainColor);
+  color: var(--textColor);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+nav a{
+  color: var(--textColor);
+  text-decoration: none;
+  margin: 0 2rem;
+}
+nav a:hover{
+  color: var(--secondaryColor);
+}
+header .nav-btn{
+  padding: 5px;
+  display: none;
+  font-size: 1.8rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  visibility: hidden;
+  color: var(--textColor);
+  cursor: pointer;
+  opacity: 0;
+} 
+@media only screen and (max-width: 1024px){
+  header .nav-btn{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+  header nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--mainColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    transform: translateY(100vh);
+    transition: 1s;
+  }
+  nav.responsive_nav{
+    transform: none;
+  }
+  nav .nav-close-btn{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+  nav a{
+    font-size: 1.5rem;
+  }
+}
+.profile-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-btn {
+  background: none;
+  border: none;
+  color: #77d151; /* adjust to match navbar theme */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.profile-dropdown a {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  transition: background 0.2s;
+}
+
+.profile-dropdown a:hover {
+  background: #f0f0f0;
+}
+.profile-btn:hover {
+  color: #4a8331; /* darker shade on hover */
+} 

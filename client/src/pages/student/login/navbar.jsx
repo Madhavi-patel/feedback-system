@@ -33,6 +33,7 @@
 import { useRef, useState } from "react";
 import "./navbar.css";
 import { FaBars, FaTimes, FaUserCircle } from "react-icons/fa";
+import r1 from "../../../assets/fs2.png";
 
 function Navbar() {
   const navRef = useRef();
@@ -43,6 +44,7 @@ function Navbar() {
   };
 
   return (
+    <div>
     <header>
       <h3>logo</h3>
       <nav ref={navRef}>
@@ -55,7 +57,7 @@ function Navbar() {
             className="profile-btn" 
             onClick={() => setShowDropdown(!showDropdown)}
           >
-            <FaUserCircle size={22}/> 
+            <FaUserCircle className="icon" size={25} />
             {/* Profile */}
 
           </button>
@@ -75,6 +77,16 @@ function Navbar() {
         <FaBars />
       </button>
     </header>
+    <div> 
+
+<h1 className="welcome-text">Student Feedback </h1>
+
+      <img className="student-image" src={r1} alt="image" />
+
+      <button className="feedback-btn" onClick={() => window.location.href='/feedback'}>Give Feedback</button>
+
+    </div>
+    </div>
   );
 }
 

@@ -9,7 +9,7 @@
   --mainColor:#ddf6d2;
   --mainColorLight:#ecf1e5;
   --secondaryColor:#4a8331;
-  --textColor:#77d151;
+  --textColor:#000000;
 }
 header{
   display: flex;
@@ -82,7 +82,7 @@ header .nav-btn{
 .profile-btn {
   background: none;
   border: none;
-  color: #77d151; /* adjust to match navbar theme */
+  color: black; /* adjust to match navbar theme */
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -116,3 +116,29 @@ header .nav-btn{
 .profile-btn:hover {
   color: #4a8331; /* darker shade on hover */
 } 
+img{
+width: 60%;
+height: auto;
+margin: auto;
+display: flex;
+}
+.welcome-text{
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2.5rem;
+  color: var(--secondaryColor);
+}
+.feedback-btn{
+  display: block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: var(--secondaryColor);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 10px;
+}
+
